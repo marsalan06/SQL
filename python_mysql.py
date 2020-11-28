@@ -81,13 +81,49 @@ mycursor=mydb.cursor() #cursor object instiated on db
 #     print(r)
 #------------------------------------------------------#
 #to update value
-sql_formula= "UPDATE students SET age=13 WHERE name = 'sajahar'"
-mycursor.execute(sql_formula)
-mydb.commit()
-sql_formula="SELECT * from students limit 5 offset 4" # limits to 5 result after 4th 
-mycursor.execute(sql_formula)
-myresult=mycursor.fetchall()
-for i in myresult:
-    print(i)
+# sql_formula= "UPDATE students SET age=13 WHERE name = 'sajahar'"
+# mycursor.execute(sql_formula)
+# mydb.commit()
+# sql_formula="SELECT * from students limit 5 offset 4" # limits to 5 result after 4th 
+# mycursor.execute(sql_formula)
+# myresult=mycursor.fetchall()
+# for i in myresult:
+#     print(i)
 
+#------------------------------------------------------#
+#sorting technique
 
+#sql_formula="SELECT * FROM students order by name"
+#sql_formula="SELECT * FROM students order by age DESC"
+# sql_formula="SELECT * FROM students order by age ASC"
+# mycursor.execute(sql_formula)
+# myresult=mycursor.fetchall()
+# for i in myresult:
+#     print(i)
+#------------------------------------------------------#
+# sql_formula = "insert into students (name,age) values (%s,%s)"
+# student=("sajahar",13)
+# mycursor.execute(sql_formula,student)
+# mydb.commit()
+# sql_formula="select * from students"
+# mycursor.execute(sql_formula)
+# myresult=mycursor.fetchall()
+# for i in myresult:
+#     print(i)
+
+# #to delete entry 
+# sql_formula="delete from students where name='sajahar'"
+# mycursor.execute(sql_formula)
+# mydb.commit()
+# sql_formula="select * from students"
+# mycursor.execute(sql_formula)
+# my_result=mycursor.fetchall()
+# for i in my_result:
+#     print(i)
+    
+#--------------------------------------------------------#
+#delete table 
+# sql_formula="DROP TABLE IF EXIST students"
+# mycursor.execute(sql_formula)
+# mydb.commit()
+#--------------------------------------------------------#
