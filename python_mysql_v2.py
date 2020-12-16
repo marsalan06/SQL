@@ -1,21 +1,21 @@
 import mysql.connector
 from mysql.connector.cursor import MySQLCursorPrepared
 from datetime import datetime
-# db=mysql.connector.connect(
-#     host="localhost",
-#     user="root",
-#     passwd="root"
-# )
-# mycursor=db.cursor()
-# mycursor.execute("CREATE DATABASE testdatabase")
 db=mysql.connector.connect(
     host="localhost",
     user="root",
-    passwd="root",
-    database="testdatabase"
+    passwd="root"
 )
-
 mycursor=db.cursor()
+mycursor.execute("CREATE DATABASE testdatabase")
+# db=mysql.connector.connect(
+#     host="localhost",
+#     user="root",
+#     passwd="root",
+#     database="testdatabase"
+# )
+
+# mycursor=db.cursor()
 
 #table created
 #mycursor.execute("CREATE TABLE Person (name VARCHAR(50),age smallint UNSIGNED, personID int PRIMARY KEY AUTO_INCREMENT)") 
